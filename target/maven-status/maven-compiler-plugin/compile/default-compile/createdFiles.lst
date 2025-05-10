@@ -1,0 +1,12 @@
+br/com/estampamente/entity/orderItems.class
+br/com/estampamente/service/OrderService.class
+br/com/estampamente/entity/Order.class
+br/com/estampamente/entity/Items.class
+br/com/estampamente/entity/Payment.class
+br/com/estampamente/repository/OrderRepository.class
+br/com/estampamente/entity/Client.class
+br/com/estampamente/service/ClientService.class
+br/com/estampamente/controller/ClientController.class
+br/com/estampamente/repository/ClientRepository.class
+br/com/estampamente/controller/OrderController.class
+br/com/estampamente/Program.class
