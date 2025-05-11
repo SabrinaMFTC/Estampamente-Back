@@ -10,7 +10,6 @@ br/com/estampamente/entities/OrderItems.class
 br/com/estampamente/entities/enums/PaymentMethod.class
 br/com/estampamente/entities/enums/Category.class
 br/com/estampamente/repositories/ItemRepository.class
-br/com/estampamente/security/CustomUserDetailsService.class
 br/com/estampamente/entities/Address.class
 br/com/estampamente/entities/enums/Size.class
 br/com/estampamente/services/OrderService.class

@@ -17,11 +17,11 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 public class SecurityConfig {
 
-    @Autowired
-    private CustomUserDetailsService clientDetailsService;
-
-    @Autowired
-    SecurityFilter securityFilter;
+//    @Autowired
+//    private CustomUserDetailsService clientDetailsService;
+//
+//    @Autowired
+//    SecurityFilter securityFilter;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -33,8 +33,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> {
                     //auth.requestMatchers("/items/*","/pedidos/*").permitAll();
                     auth.anyRequest().permitAll();
-                })
-                .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class);
+                });
+//                .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
@@ -46,7 +46,6 @@ public class SecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        // Usa diretamente BCrypt, sem precisar de prefixo
         return new BCryptPasswordEncoder();
     }
 

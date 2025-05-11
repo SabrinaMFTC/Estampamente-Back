@@ -33,4 +33,13 @@ public class ClientController {
         }
     }
 
+//    @GetMapping("/{id}")
+//    public ResponseEntity<Client> getClientById(@PathVariable Long id) {
+//        try {
+//            Client client = clientService.getClientById(id);
+//            return new ResponseEntity<>(client, HttpStatus.OK);
+//        } catch (Exception e) {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+//    }
 }

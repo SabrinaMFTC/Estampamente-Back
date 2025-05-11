@@ -31,8 +31,8 @@ public class ClientService {
         return clientRepository.findAll();
     }
 
-    public Client getClientById(Long id) {
-        return clientRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Cliente não encontrado pelo ID."));
-    }
+//    public Client getClientById(Long id) {
+//        return clientRepository.findById(id)
+//                .orElseThrow(() -> new RuntimeException("Cliente não encontrado pelo ID."));
+//    }
 }
