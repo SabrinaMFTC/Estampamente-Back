@@ -1,5 +1,6 @@
 package br.com.estampamente.entities.DTOs;
 
+import br.com.estampamente.entities.enums.ItemType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
@@ -12,6 +13,7 @@ public class ItemDTO {
     private String title;
     private String description;
     private Double price;
+    private ItemType type;
 
     @JsonProperty("discount_percent")
     private Integer discountPercent;

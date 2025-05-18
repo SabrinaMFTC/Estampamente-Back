@@ -33,8 +33,8 @@ public class AuthController {
                             loginDTO.getPassword()
                     )
             );
-
-            return  jwtUtil.generateToken(authentication.getName());
+            String token =  jwtUtil.generateToken(authentication.getName());
+            return token;
         } catch (Exception e){
                 return "";
         }

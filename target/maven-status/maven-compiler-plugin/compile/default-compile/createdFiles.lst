@@ -10,6 +10,7 @@ br/com/estampamente/entities/OrderItems.class
 br/com/estampamente/entities/enums/PaymentMethod.class
 br/com/estampamente/entities/enums/Category.class
 br/com/estampamente/repositories/ItemRepository.class
+br/com/estampamente/entities/DTOs/OrderDTO.class
 br/com/estampamente/entities/Address.class
 br/com/estampamente/entities/enums/Size.class
 br/com/estampamente/services/OrderService.class
@@ -24,5 +25,6 @@ br/com/estampamente/entities/Client.class
 br/com/estampamente/services/ItemService.class
 br/com/estampamente/entities/DTOs/LoginDTO.class
 br/com/estampamente/Program.class
+br/com/estampamente/utils/DtoConverters.class
 br/com/estampamente/services/ClientService.class
 br/com/estampamente/security/SecurityFilter.class

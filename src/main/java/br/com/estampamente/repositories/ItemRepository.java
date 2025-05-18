@@ -19,6 +19,7 @@ public interface ItemRepository extends JpaRepository<Item, Integer> {
             i.name,
             i.description,
             i.price,
+            i.itemType,
             i.discount,
             i.brand,
             i.imageLink
@@ -34,6 +35,7 @@ public interface ItemRepository extends JpaRepository<Item, Integer> {
         i.name,
         i.description,
         i.price,
+         i.itemType,
         i.discount,
         i.brand,
         i.imageLink

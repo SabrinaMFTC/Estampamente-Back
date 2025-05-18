@@ -1,10 +1,15 @@
 package br.com.estampamente.controllers;
 
+import br.com.estampamente.entities.Client;
+import br.com.estampamente.entities.DTOs.OrderDTO;
 import br.com.estampamente.entities.Order;
 import br.com.estampamente.services.OrderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,14 +34,24 @@ public class OrderController {
     }
 
     @GetMapping
-    public List<Order> getAllOrders() {
-        logger.info("Todos os Pedidos");
-        return orderService.getAllOrders();
+    public ResponseEntity<List<OrderDTO>> getAllOrders(Authentication authentication) {
+       try{
+           Client client = (Client) authentication.getPrincipal();
+           return new ResponseEntity<>( orderService.getAllOrders(client.getId()),HttpStatus.OK);
+       } catch (Exception e) {
+           return new ResponseEntity<>( HttpStatus.INTERNAL_SERVER_ERROR);
+
+       }
     }
 
     @GetMapping("/{id}")
-    public Order getOrder(@PathVariable Long id) {
-        logger.info("Pedido n. {}", id);
-        return orderService.getOrderById(id);
+    public ResponseEntity<Order> getOrder(@PathVariable Long id, Authentication authentication) {
+        try{
+            logger.info("Pedido n. {}", id);
+            return new ResponseEntity<>(orderService.getOrderById(id), HttpStatus.OK);
+        }catch (Exception e){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
     }
 }

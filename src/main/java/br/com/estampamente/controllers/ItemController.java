@@ -1,5 +1,6 @@
 package br.com.estampamente.controllers;
 
+import br.com.estampamente.entities.Client;
 import br.com.estampamente.entities.DTOs.ItemDTO;
 import br.com.estampamente.entities.enums.ItemType;
 import br.com.estampamente.services.ItemService;
@@ -8,6 +9,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,6 +27,7 @@ public class ItemController {
     @Autowired
     public ItemController(ItemService itemService) {
         this.itemService= itemService;
+
     }
 
     @GetMapping("/{type}")
@@ -36,13 +40,13 @@ public class ItemController {
         }
     }
 
-    @GetMapping("/camiseta/{id}")
-    public ResponseEntity<ItemDTO> getItemById(@PathVariable(name = "id") Long id) {
+    @GetMapping("/{type}/{id}")
+    public ResponseEntity<ItemDTO> getItemById(@PathVariable(name = "type") String type, @PathVariable(name = "id") Long id) {
         try {
             ItemDTO item = itemService.getItemById(id);
             return new ResponseEntity<>(item, HttpStatus.OK);
         } catch (Exception e) {
-            logger.error("Item not found for id: {}",id);
+            logger.error("Item of type {} not found for id: {}", type, id);
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
