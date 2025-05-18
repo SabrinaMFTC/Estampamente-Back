@@ -1,4 +1,4 @@
-package br.com.estampamente.entity.enums;
+package br.com.estampamente.entities.enums;
 
 public enum ItemType {
     CAMISETA,

@@ -1,9 +1,8 @@
-package br.com.estampamente.service;
+package br.com.estampamente.services;
 
-import br.com.estampamente.entity.DTOs.ItemDTO;
-import br.com.estampamente.entity.Item;
-import br.com.estampamente.entity.enums.ItemType;
-import br.com.estampamente.repository.ItemRepository;
+import br.com.estampamente.entities.DTOs.ItemDTO;
+import br.com.estampamente.entities.enums.ItemType;
+import br.com.estampamente.repositories.ItemRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

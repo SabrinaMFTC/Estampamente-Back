@@ -1,7 +1,8 @@
-package br.com.estampamente.service;
+package br.com.estampamente.services;
 
-import br.com.estampamente.entity.Client;
-import br.com.estampamente.repository.ClientRepository;
+import br.com.estampamente.entities.Client;
+import br.com.estampamente.repositories.ClientRepository;
+import br.com.estampamente.utils.PasswordUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,8 @@ public class ClientService {
         this.clientRepository = clientRepository;
     }
 
-    public Client saveClient(Client client) {
+    public Client createClient(Client client) {
+        client.setPassword(PasswordUtils.hashPassword(client.getPassword()));
         return clientRepository.save(client);
     }
 
@@ -29,11 +31,8 @@ public class ClientService {
         return clientRepository.findAll();
     }
 
-    public Client getClientById(Long id) {
-        return clientRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Cliente não encontrado."));
-    }
+//    public Client getClientById(Long id) {
+//        return clientRepository.findById(id)
+//                .orElseThrow(() -> new RuntimeException("Cliente não encontrado pelo ID."));
+//    }
 }
-
-
-

@@ -1,6 +1,6 @@
-package br.com.estampamente.entity;
+package br.com.estampamente.entities;
 
-import br.com.estampamente.entity.enums.PaymentMethod;
+import br.com.estampamente.entities.enums.PaymentMethod;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,10 +10,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "orders")
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class Order {
 
     @Id

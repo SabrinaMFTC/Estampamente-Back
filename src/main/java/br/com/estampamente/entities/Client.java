@@ -1,4 +1,4 @@
-package br.com.estampamente.entity;
+package br.com.estampamente.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -7,10 +7,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "clients")
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class Client {
 
     @Id

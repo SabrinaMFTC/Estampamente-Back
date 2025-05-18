@@ -1,14 +1,14 @@
-package br.com.estampamente.entity;
+package br.com.estampamente.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "order_items") // <- nome mais seguro e compatível com PostgreSQL
-@Getter
-@Setter
+@Table(name = "order_items")
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class OrderItems {
 
     @Id

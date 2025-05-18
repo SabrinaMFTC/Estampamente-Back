@@ -1,7 +1,7 @@
-package br.com.estampamente.entity;
+package br.com.estampamente.entities;
 
-import br.com.estampamente.entity.enums.ItemType;
-import br.com.estampamente.entity.enums.Size;
+import br.com.estampamente.entities.enums.ItemType;
+import br.com.estampamente.entities.enums.Size;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,10 +10,10 @@ import java.util.ArrayList;
 
 @Entity
 @Table(name = "items")
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class Item {
 
     @Id

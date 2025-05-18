@@ -1,14 +1,14 @@
-package br.com.estampamente.entity;
+package br.com.estampamente.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
 @Table(name = "payments")
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class CreditCard {
 
     @Id
