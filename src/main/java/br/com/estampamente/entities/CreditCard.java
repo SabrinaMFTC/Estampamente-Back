@@ -22,5 +22,5 @@ public class CreditCard {
     private Integer cvv;
 
     @Column
-    private String paymentLabel;
+    private String cardName;
 }

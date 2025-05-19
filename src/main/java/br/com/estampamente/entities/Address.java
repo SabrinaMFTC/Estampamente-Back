@@ -29,4 +29,8 @@ public class Address {
 
     @Column
     private String country;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "client_id", nullable = false)
+    private Client client;
 }

@@ -6,6 +6,9 @@
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/Address.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/Client.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/CreditCard.java
+/home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/DTOs/AddressDTO.java
+/home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/DTOs/ClientDTO.java
+/home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/DTOs/CreditCardDTO.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/DTOs/ItemDTO.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/DTOs/LoginDTO.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/DTOs/OrderDTO.java
