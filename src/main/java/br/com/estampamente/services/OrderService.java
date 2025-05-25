@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class OrderService {
@@ -33,11 +32,9 @@ public class OrderService {
         if(orders.isEmpty()){
             return List.of();
         }
-        List<OrderDTO> dtos = orders.stream()
+        return orders.stream()
                 .map(DtoConverters::toDto)
                 .toList();
-
-        return dtos;
     }
 
     public Order getOrderById(Long id) {

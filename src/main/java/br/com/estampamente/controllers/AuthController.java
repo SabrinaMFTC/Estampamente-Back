@@ -3,14 +3,16 @@ package br.com.estampamente.controllers;
 import br.com.estampamente.entities.DTOs.LoginDTO;
 import br.com.estampamente.security.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+
+@CrossOrigin
 @RestController
 public class AuthController {
 
@@ -25,19 +27,22 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public String login(@RequestBody LoginDTO loginDTO){
-        try{
+    public ResponseEntity<?> login(@RequestBody LoginDTO loginDTO) {
+        try {
             Authentication authentication = authManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
                             loginDTO.getUsername(),
                             loginDTO.getPassword()
                     )
             );
-            String token =  jwtUtil.generateToken(authentication.getName());
-            return token;
-        } catch (Exception e){
-                return "";
-        }
 
+            String token = jwtUtil.generateToken(authentication.getName());
+
+            return ResponseEntity.ok(token);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credenciais inválidas");
+        }
     }
 }
+
+

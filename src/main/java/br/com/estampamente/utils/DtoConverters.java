@@ -27,7 +27,10 @@ public class DtoConverters {
         return new AddressDTO(
                 address.getId(),
                 address.getCity(),
-                address.getCountry()
+                address.getCountry(),
+                address.getStreet(),
+                address.getNumber(),
+                address.getZipCode()
         );
     }
 
@@ -43,9 +46,10 @@ public class DtoConverters {
 
     public static CreditCardDTO toCreditCardDto(CreditCard card) {
         if (card == null) return null;
+        String lastThreeDigits = card.getCardNumber().substring(card.getCardNumber().length() - 3);
         return new CreditCardDTO(
                 card.getId(),
-                card.getCardNumber(),
+                "Cartão final: " + lastThreeDigits,
                 card.getCvv(),
                 card.getCardName()
         );

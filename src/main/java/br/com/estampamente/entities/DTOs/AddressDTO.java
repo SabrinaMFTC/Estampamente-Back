@@ -12,10 +12,16 @@ import lombok.Setter;
 @Setter
 public class AddressDTO {
 
-    private Long od;
+    private Long id;
 
     private String city;
 
     private String country;
+
+    private String street;
+
+    private Integer number;
+
+    private String zip;
 
 }

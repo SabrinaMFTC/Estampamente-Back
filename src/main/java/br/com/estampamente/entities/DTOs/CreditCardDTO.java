@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 public class CreditCardDTO {
     private Integer id;
-    private String cardNumber;
+    private String description;
     private Integer cvv;
-    private String cardName;
+    private String title;
 }

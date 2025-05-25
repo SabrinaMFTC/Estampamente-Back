@@ -13,9 +13,9 @@ import java.time.LocalDateTime;
 @Setter
 public class OrderDTO {
     private Long id;
-    private String nome;
+    private String title;
     private LocalDateTime data;
-    private String status;
+    private String description;
 
 
 }
