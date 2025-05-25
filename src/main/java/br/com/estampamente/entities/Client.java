@@ -37,7 +37,6 @@ public class Client {
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CreditCard> creditCards = new ArrayList<>();
-
 }
 
 

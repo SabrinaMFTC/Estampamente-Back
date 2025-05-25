@@ -14,7 +14,6 @@ public class ItemDTO {
     private String description;
     private Double price;
     private ItemType type;
-
     @JsonProperty("discount_percent")
     private Integer discountPercent;
     private String brand;

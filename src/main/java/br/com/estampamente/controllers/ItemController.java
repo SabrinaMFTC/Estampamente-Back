@@ -1,6 +1,5 @@
 package br.com.estampamente.controllers;
 
-
 import br.com.estampamente.entities.DTOs.ItemDTO;
 import br.com.estampamente.entities.enums.ItemType;
 import br.com.estampamente.services.ItemService;
@@ -13,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
+@CrossOrigin
 @RestController
 @RequestMapping("/items")
 public class ItemController {
@@ -25,7 +24,6 @@ public class ItemController {
     @Autowired
     public ItemController(ItemService itemService) {
         this.itemService= itemService;
-
     }
 
     @GetMapping("/{type}")

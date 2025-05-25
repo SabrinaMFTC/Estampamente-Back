@@ -21,7 +21,6 @@ public class DtoConverters {
         );
     }
 
-
     public static AddressDTO toAddressDto(Address address) {
         if (address == null) return null;
         return new AddressDTO(
@@ -34,15 +33,12 @@ public class DtoConverters {
         );
     }
 
-
     public static List<AddressDTO> toAddressDtoList(List<Address> addresses) {
         if (addresses == null) return List.of();
         return addresses.stream()
                 .map(DtoConverters::toAddressDto)
                 .collect(Collectors.toList());
     }
-
-
 
     public static CreditCardDTO toCreditCardDto(CreditCard card) {
         if (card == null) return null;
@@ -55,7 +51,6 @@ public class DtoConverters {
         );
     }
 
-
     public static List<CreditCardDTO> toCreditCardDtoList(List<CreditCard> cards) {
         if (cards == null || cards.isEmpty()) {
             return List.of();
@@ -64,5 +59,4 @@ public class DtoConverters {
                 .map(DtoConverters::toCreditCardDto)
                 .collect(Collectors.toList());
     }
-
 }

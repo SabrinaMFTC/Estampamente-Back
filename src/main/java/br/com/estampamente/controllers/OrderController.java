@@ -40,7 +40,6 @@ public class OrderController {
            return new ResponseEntity<>( orderService.getAllOrders(client.getId()),HttpStatus.OK);
        } catch (Exception e) {
            return new ResponseEntity<>( HttpStatus.INTERNAL_SERVER_ERROR);
-
        }
     }
 
@@ -52,6 +51,5 @@ public class OrderController {
         }catch (Exception e){
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
-
     }
 }

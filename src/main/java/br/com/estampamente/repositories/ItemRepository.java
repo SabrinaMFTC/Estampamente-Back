@@ -44,6 +44,4 @@ public interface ItemRepository extends JpaRepository<Item, Integer> {
     WHERE i.id = :id
 """)
     ItemDTO findById(@Param("id") Long id);
-
-
 }

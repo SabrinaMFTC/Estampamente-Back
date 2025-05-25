@@ -14,7 +14,6 @@ public class ClientDTO {
     private Long id;
     private String email;
     private String nome;
-
     private String phoneNumber;
     private List<AddressDTO> address;
     private List<OrderDTO> orders;

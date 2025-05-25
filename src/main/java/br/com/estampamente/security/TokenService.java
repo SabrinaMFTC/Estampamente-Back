@@ -30,8 +30,6 @@ public class TokenService {
                 .sign(Algorithm.HMAC256(secret));
     }
 
-
-
     public String validateToken(String token) {
         try {
             Algorithm algorithm = Algorithm.HMAC256(secret);
@@ -48,7 +46,6 @@ public class TokenService {
         DecodedJWT jwt = verifier.verify(token);
         return jwt.getSubject();
     }
-
 
     private Instant generateExpirationDate() {
         return LocalDateTime.now().plusMinutes(30).toInstant(ZoneOffset.of("-03:00"));
