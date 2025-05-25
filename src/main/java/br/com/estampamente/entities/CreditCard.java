@@ -23,4 +23,9 @@ public class CreditCard {
 
     @Column
     private String cardName;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "client_id", nullable = false)
+    private Client client;
+
 }

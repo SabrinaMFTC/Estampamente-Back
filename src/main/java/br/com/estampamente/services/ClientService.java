@@ -51,6 +51,7 @@ public class ClientService {
                 clientDTO.setPhoneNumber(client.get().getPhoneNumber());
                 clientDTO.setOrders(orderDTOS);
                 clientDTO.setAddress(DtoConverters.toAddressDtoList(client.get().getAddresses()));
+                clientDTO.setCards(DtoConverters.toCreditCardDtoList(client.get().getCreditCards()));
             }
             return clientDTO;
     }

@@ -20,4 +20,5 @@ public class ClientDTO {
     private String phoneNumber;
     private List<AddressDTO> address;
     private List<OrderDTO> orders;
+    private List<CreditCardDTO> cards;
 }
