@@ -30,7 +30,7 @@ public class SecurityConfig {
                         sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
                 .authorizeHttpRequests(auth -> {
-                    auth.requestMatchers("/login","/items/**").permitAll();
+                    auth.requestMatchers("/login","/items/**","/pedidos/create").permitAll();
                     auth.requestMatchers(HttpMethod.OPTIONS,"/**").permitAll();
 
                     auth.anyRequest().authenticated();

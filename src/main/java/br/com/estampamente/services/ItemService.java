@@ -27,6 +27,6 @@ public class ItemService {
     }
 
     public ItemDTO getItemById(Long id) {
-        return itemRepository.findById(id);
+        return itemRepository.findItemById(id);
     }
 }

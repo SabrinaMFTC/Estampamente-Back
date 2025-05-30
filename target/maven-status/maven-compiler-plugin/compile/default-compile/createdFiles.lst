@@ -11,6 +11,7 @@ br/com/estampamente/entities/enums/PaymentMethod.class
 br/com/estampamente/entities/enums/Category.class
 br/com/estampamente/repositories/ItemRepository.class
 br/com/estampamente/entities/DTOs/OrderDTO.class
+br/com/estampamente/entities/DTOs/OrderItemDTO.class
 br/com/estampamente/entities/DTOs/ClientDTO.class
 br/com/estampamente/entities/Address.class
 br/com/estampamente/entities/DTOs/AddressDTO.class
@@ -22,6 +23,7 @@ br/com/estampamente/entities/DTOs/ItemDTO.class
 br/com/estampamente/controllers/AuthController.class
 br/com/estampamente/security/SecurityConfig.class
 br/com/estampamente/repositories/ClientRepository.class
+br/com/estampamente/entities/DTOs/CheckoutRequestDTO.class
 br/com/estampamente/controllers/ItemController.class
 br/com/estampamente/entities/enums/ItemType.class
 br/com/estampamente/entities/Client.class

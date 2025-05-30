@@ -1,6 +1,7 @@
 package br.com.estampamente.controllers;
 
 import br.com.estampamente.entities.Client;
+import br.com.estampamente.entities.DTOs.CheckoutRequestDTO;
 import br.com.estampamente.entities.DTOs.OrderDTO;
 import br.com.estampamente.entities.Order;
 import br.com.estampamente.services.OrderService;
@@ -49,6 +50,16 @@ public class OrderController {
             logger.info("Pedido n. {}", id);
             return new ResponseEntity<>(orderService.getOrderById(id), HttpStatus.OK);
         }catch (Exception e){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PostMapping("/create")
+    public ResponseEntity<String> createOrder(@RequestBody CheckoutRequestDTO checkoutRequestDTO){
+        try {
+            orderService.createOrder(checkoutRequestDTO);
+            return new ResponseEntity<>("pedido criado",HttpStatus.CREATED);
+        } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

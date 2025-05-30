@@ -42,6 +42,6 @@ public class Order {
     private Client client;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "payment_method", nullable = false)
+    @Column(name = "payment_method", nullable = true)
     private PaymentMethod paymentMethod;
 }

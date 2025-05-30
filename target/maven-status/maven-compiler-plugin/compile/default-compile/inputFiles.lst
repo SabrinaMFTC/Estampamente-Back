@@ -7,11 +7,13 @@
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/Client.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/CreditCard.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/DTOs/AddressDTO.java
+/home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/DTOs/CheckoutRequestDTO.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/DTOs/ClientDTO.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/DTOs/CreditCardDTO.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/DTOs/ItemDTO.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/DTOs/LoginDTO.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/DTOs/OrderDTO.java
+/home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/DTOs/OrderItemDTO.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/Item.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/Order.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/entities/OrderItems.java
@@ -22,7 +24,6 @@
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/repositories/ClientRepository.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/repositories/ItemRepository.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/repositories/OrderRepository.java
-/home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/security/CustomUserDetailsService.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/security/SecurityConfig.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/security/SecurityFilter.java
 /home/sabrina/GitHub/Estampamente-Back/src/main/java/br/com/estampamente/security/TokenService.java
